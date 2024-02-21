@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        #panel {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            z-index: 999;
+            border-radius: 5px;
+        }
+
+        .jumbotron {
+            background-image: url('https://th.bing.com/th/id/R.7cf85c9bf5295e6efb197263e5952cb1?rik=TMYaiMbDW%2fyaCA&riu=http%3a%2f%2feskipaper.com%2fimages%2fblack-backgrounds-11.jpg&ehk=k%2fcKWdbHEYW4VPcNCPZ0g9GrI0wPvmEp1O2fC7p5FY8%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .jumbotron h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .product {
+            margin-bottom: 50px;
+        }
+
+        .product img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .product h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TechCorporation </h1>
+    </header>
+
+    <nav>
+        <a href="#">Celulares</a>
+        <a href="#">Computadoras</a>
+        <a href="#">Relojes</a>
+        <a href="#">Audífonos</a>
+        <a href="#">Alexa</a>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Bienvenidos a TechCorporation</h1>
+            <p>Los ultimos lanzamientos tecnologicos AQUI</p>
+        </div>
+    </div>
+
+    <div class="container products">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="https://www.altonivel.com.mx/wp-content/uploads/2018/06/mejores-celulares-2018.jpg"
+                        alt="Celulares">
+                    <h2>Celulares</h2>
+                    <p>El futuro en la palma de tu mano</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="https://3.bp.blogspot.com/-OZBr--CxWuk/W0Mn9LGCqJI/AAAAAAAAMG8/SkEDcxURIYweHY_QvEoysz9RDcW7fjwdACLcBGAs/s1600/Image.jpg"
+                        alt="Laptops">
+                    <h2>Laptops</h2>
+                    <p>Un mundo lleno de aventuras</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="https://www.relojsmartwatch.com/wp-content/uploads/2019/01/best-reloj-inteligente.jpg"
+                        alt="Reloj">
+                    <h2>Reloj</h2>
+                    <p>Eleganica, Lujo, Tecnologia. Todo esto y mucho mas </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="https://ss632.liverpool.com.mx/xl/1091105990.jpg" alt="Audifonos">
+                    <h2>Audifonos</h2>
+                    <p>Desconectate del mundo exterior y vive una gran experiecia auditiva</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="https://miracomosehace.com/wp-content/uploads/2020/07/equipo-alexa.jpg" alt="Alexa">
+                    <h2>Alexa</h2>
+                    <p>Facilidad de tareas, solo con tu voz </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
