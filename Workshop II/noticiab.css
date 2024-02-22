@@ -1,0 +1,27 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #1551d1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.noticia {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.noticia h2 {
+    color: #1551d1;
+}
+
+.noticia p {
+    color: #666;
+}
+
