@@ -25,7 +25,10 @@ h1 {
         background-color: rgb(237, 218, 49);
     }
 }
-
+ .container-products {
+    flex: 1;
+    padding: 20ch;
+ }
 
 header,
 nav {
