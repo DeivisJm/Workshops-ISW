@@ -1,16 +1,21 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url("../Imagen/Logo.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
 }
 
 
 .container {
     max-width: 350px;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     float: left;
+    opacity: 1;
 }
 
 

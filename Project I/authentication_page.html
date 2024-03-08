@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication</title>
+    <title>Autenticación</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="authentication_page.css">
-</head>
 
 <body>
 
@@ -24,7 +23,7 @@
         </form>
         <p id="message"></p>
         <div id="register-link">
-            <p>Si no tienes una cuenta, <a href="registration.html">Registrala aqui</a>.</p>
+            <p>Si no tienes una cuenta, <a href="registration.html">Creala aquí</a>.</p>
         </div>
     </div>
 
@@ -37,7 +36,7 @@
 
             var isValidUser = false;
 
-            // Verificar si el usuario y la contraseña coinciden con algún usuario registrado
+            //check if the username and password match any registered user
             for (var i = 0; i < users.length; i++) {
                 if (users[i].username === username && users[i].password === password) {
                     isValidUser = true;
@@ -46,14 +45,12 @@
             }
 
             if (isValidUser) {
-                // Autenticación exitosa
-                document.getElementById("message").innerHTML = "Bienvenido, " + username + "!";
+                document.getElementById("message").innerHTML = "¡Bienvenido, " + username + "!";
                 window.location.href = "dashboard.html";
-                return false; // Evita el envío del formulario
+                return false;
             } else {
-                // Autenticación fallida
                 document.getElementById("message").innerHTML = "Cuenta no existente";
-                return false; // Evita el envío del formulario
+                return false;
             }
         }
     </script>

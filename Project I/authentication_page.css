@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -9,7 +10,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
+
 
 input[type="text"],
 input[type="password"] {
@@ -17,6 +20,8 @@ input[type="password"] {
     padding: 10px;
     margin: 10px 0;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 input[type="submit"] {
@@ -30,6 +35,10 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 #register-link {
     text-align: center;
 }
@@ -39,18 +48,17 @@ input[type="submit"] {
     text-decoration: underline;
 }
 
-@media (max-width: 767px) {
-    .jumbotron h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
+#register-link a:hover {
+    color: #0056b3;
+}
 
-    .jumbotron p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
+#message {
+    margin-top: 10px;
+    text-align: center;
+    color: #ff0000;
+}
 
-    .product img {
-        width: 100%;
-    }
+h2 {
+    text-align: center;
+    color: #007bff;
 }
