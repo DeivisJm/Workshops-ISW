@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop V</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="addClients.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Digite sus datos</h2>
+        <form id="clientForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Apellido:</label>
+                <input type="text" class="form-control" id="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefono:</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveClient()">Guardar</button>
+        </form>
+        <div id="savedClients"></div>
+    </div>
+
+    <script>
+        function saveClient() {
+            var name = document.getElementById('name').value;
+            var surname = document.getElementById('surname').value;
+            var phone = document.getElementById('phone').value;
+
+            var clients = JSON.parse(localStorage.getItem('clients')) || [];
+
+            clients.push({ name: name, surname: surname, phone: phone });
+
+            localStorage.setItem('clients', JSON.stringify(clients));
+
+            document.getElementById('clientForm').reset();
+
+            showClients();
+        }
+
+        function showClients() {
+            var clients = JSON.parse(localStorage.getItem('clients')) || [];
+            var savedClientsDiv = document.getElementById('savedClients');
+            savedClientsDiv.innerHTML = '';
+
+            if (clients.length === 0) {
+                savedClientsDiv.innerHTML = '<p>No hay clientes guardados</p>';
+            } else {
+                var listClients = '<h3>Clientes Guardados</h3><ul>';
+                clients.forEach(function (client) {
+                    listClients += '<li>' + client.name + ' ' + client.surname + ' - Telefono: ' + client.phone + '</li>';
+                });
+                listClients += '</ul>';
+                savedClientsDiv.innerHTML = listClients;
+            }
+        }
+
+        showClients();
+    </script>
+</body>
+
+</html>

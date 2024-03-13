@@ -127,9 +127,8 @@
                     password: password
                 };
                 users.push(newUser);
-                document.getElementById("message").innerHTML = "Usuario registrado correctamente.";
                 window.location.href = "authentication_page.html";
-                return false; // Evitar que el formulario se envíe
+                return false;
             } else {
                 document.getElementById("message").innerHTML = "Usuario no registrado.";
             }

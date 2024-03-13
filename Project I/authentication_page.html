@@ -34,9 +34,11 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+
             var isValidUser = false;
 
-            //check if the username and password match any registered user
+            // Check if the username and password match any registered user
             for (var i = 0; i < users.length; i++) {
                 if (users[i].username === username && users[i].password === password) {
                     isValidUser = true;
@@ -53,6 +55,7 @@
                 return false;
             }
         }
+
     </script>
 
     </script>
